@@ -1,7 +1,5 @@
-
 generator client {
   provider = "prisma-client-js"
- 
 }
 
 datasource db {
@@ -10,23 +8,23 @@ datasource db {
 }
 
 model Grupo {
-id Int @id @default(autoincrement())
-nombre String @unique
-tutor String
-aula String
+  id     Int    @id @default(autoincrement())
+  nombre String @unique
+  tutor  String
+  aula   String
 }
 
 model Estudiante {
-  id Int @id @default(autoincrement())
-  nombre String
+  id               Int      @id @default(autoincrement())
+  nombre           String
   fecha_Nacimiento DateTime
-  foto String?
-  tutor_legal String
+  foto             String?
+  tutor_legal      String
 }
 
 model Asignatura {
-  id Int @id @default(autoincrement())
-  nombre String 
-  profesor String?
+  id           Int     @id @default(autoincrement())
+  nombre       String
+  profesor     String?
   horas_semana Int
 }
