@@ -26,12 +26,14 @@ export async function insertarGrupos(formData) {
 
 export async function insertarAsignatura(formData) {
     const nombre = formData.get('nombre')
+    const profesor = formData.get('profesor')
     const horas_semana = Number(formData.get('horas_semana'))
 
     try {
         await prisma.asignatura.create({
             data: {
                 nombre,
+                profesor,
                 horas_semana
             }
         })

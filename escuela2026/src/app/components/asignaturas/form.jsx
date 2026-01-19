@@ -13,6 +13,12 @@ function Form() {
                 required
             />
             <input
+                type="text"
+                name="profesor"
+                placeholder="Nombre del profesor"
+                className='p-2 rounded border border-(--card-border) bg-(--background)'
+            />
+            <input
                 type="number"
                 name="horas_semana"
                 placeholder="Horas semanales"
