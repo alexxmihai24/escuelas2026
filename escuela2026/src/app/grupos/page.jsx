@@ -1,6 +1,7 @@
 import Lista from '@/app/components/grupo/lista'
 import { obtenerGrupos } from '@/lib/data'
 import { Suspense } from 'react'
+import Form from '@/app/components/grupo/form'
 
 async function PaginaGrupos() {
 
@@ -9,6 +10,7 @@ async function PaginaGrupos() {
     return (
         <div>
             <h1 className='text-4xl'>PaginaGrupos</h1>
+            <Form/>
 
             <Suspense fallback={<p className='text-2xl text-blue-300'>Cargando...</p>}>
                 <Lista

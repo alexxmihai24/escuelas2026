@@ -62,3 +62,33 @@ export async function obtenerAsignatura(id) {
         console.log(error)
     }
 }
+
+
+// ------------------------- ESTUDIANTES -------------------------
+
+export async function obtenerEstudiantes() {
+
+    try {
+        await new Promise((resolve) => setTimeout(resolve, 2000))
+        const estudiantes = await prisma.estudiante.findMany()
+        return estudiantes
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+export async function obtenerEstudiante(id) {
+
+    try {
+        await new Promise((resolve) => setTimeout(resolve, 2000))
+        const estudiante = await prisma.estudiante.findUnique({
+            where: {
+                id: Number(id)
+            }
+        })
+        return estudiante
+    } catch (error) {
+        console.log(error)
+    }
+}

@@ -28,7 +28,7 @@ async function Asignatura({ id }) {
     return (
         <div className='mt-10 p-8 rounded-2xl border border-(--card-border) bg-(--card-bg) max-w-2xl'>
             <h2 className='text-3xl font-bold mb-4'>{asignatura.nombre}</h2>
-            <p className='text-xl opacity-90'><span className='font-semibold'>Horas semanales:</span> {asignatura.horas}</p>
+            <p className='text-xl opacity-90'><span className='font-semibold'>Horas semanales:</span> {asignatura.horas_semana}</p>
         </div>
     )
 }
